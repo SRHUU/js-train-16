@@ -271,13 +271,15 @@ function calculateTotalPrice(products) {
   // Перебираємо кожен об'єкт товару та додаємо ціну товару до загальної вартості
   // Виведення загальної вартості товарів у форматі "Загальна вартість товарів:", total
   // Зупинка вимірювання та виведення часу
-  console.time();
+  const label = "calculateTotalPrice";
+
+  console.time(label);
 
   let total = 0;
   products.forEach((element) => (total += element.price));
   console.log("Загальна вартість товарів:", total);
 
-  console.timeEnd();
+  console.timeEnd(label);
 
   return;
 }
